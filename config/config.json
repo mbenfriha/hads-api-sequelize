@@ -19,7 +19,6 @@
     "password": "Wm`7D78Z^beX9/f/",
     "database": "had",
     "host": "localhost",
-    "port": 8889,
     "dialect": "mysql"
   }
 }
