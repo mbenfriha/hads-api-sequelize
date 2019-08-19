@@ -2,6 +2,7 @@
 const Had = require('../models').Had;
 const Category = require('../models').Category;
 
+
 module.exports = {
     create: (req, res) => {
         return Had
@@ -35,15 +36,15 @@ module.exports = {
                     as: 'categories'
                 }],
             })
-            .then (had => res.status(201). send(had))
-            .then (error => res.status(400). send(error))
+            .then (had => res.status(201).send(had))
+            .then (error => res.status(400).send(error))
     },
     update: (req, res) => {
         const hadId = req.params.had_id;
         console.log(req.body);
         return Had
             .update(req.body, { where: { id: hadId } })
-            .then (had => res.status(201). send(had))
-            .then (error => res.status(400). send(error))
+            .then (had => res.status(201).send(had))
+            .then (error => res.status(400).send(error))
     }
 };
